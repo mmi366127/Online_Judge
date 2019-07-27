@@ -5,6 +5,7 @@
 #define rall(X) (X).rbegin(), (X).rend()
 #define lowbit(X) ((X)&-(X))
 #define MEM(X, val) memset((X), (val), sizeof(X));
+#define eb emplace_back
 #define pb push_back
 #define ins insert
 #define mp make_pair
