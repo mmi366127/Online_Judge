@@ -59,6 +59,7 @@ void out(Node *x) {
 
 
 int main() {
+    //
     Node *root = NULL;
     for(int i=0;i<10;i++) {
         root = merge(root,new Node(i));
