@@ -18,12 +18,10 @@ inline loli Get_hash(int l,int r){
     loli tmp = _hash[r] - _hash[l-1]*base[r-l+1]%H;
     if(tmp < 0)
         tmp += H;
-    //printf("%d\n",tmp);
     return tmp;
 }
 
 int main(){
-    //ios_base::sync_with_stdio(false); cin.tie();
     int t,n,i,j,len,ans,slen;
     loli Hnum;
     scanf("%d",&t);
