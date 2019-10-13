@@ -33,18 +33,12 @@ int la, lb, tmp[maxn] = {};
 char a[maxn], b[maxn];
 
 int main() {
+    //大數乘法
     scanf("%s %s", a, b);
     la = strlen(a), lb = strlen(b);
     int n = 1 << (__lg(la + lb - 1) + 1);
-    //printf("%d\n", n);
     for(int i = 0; i < n; i++)
         A[i] = B[i] = {0.00, 0.00};
-    /*for(int i = 0; i < la; i++) {
-        A[i] = {a[i] - '0', 0};
-    }
-    for(int i = 0; i < lb; i++) {
-        B[i] = {b[i] - '0', 0};
-    }*/
     for(int i = la - 1, j = 0; i >= 0; i--) {
         A[j++] = {a[i] - '0', 0};
     }
@@ -58,7 +52,6 @@ int main() {
     }
     FFT(A, n, -1);
     for(int i = 0; i < n; i++) {
-        //printf("%d ", (int)(A[i].real() / n + 0.5));
         tmp[i] = A[i].real() / n + 0.5;
     }
     for(int i = 0; i < n; i++) {
@@ -66,7 +59,6 @@ int main() {
             tmp[i + 1] += tmp[i] / 10;
             tmp[i] %= 10;
         }
-        //printf("%01d",tmp[i]);
     }
     for(int i = n - 1; i >= 0; i--) {
         if(tmp[i]) {
