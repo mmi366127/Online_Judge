@@ -40,6 +40,7 @@ struct hungary{
 int t,n,x,y,m;
 
 int main(){
+    // test
     cin>>t;
     while(t--){
         cin>>x>>y>>m;
